@@ -27,15 +27,17 @@ const queryMutations = `
             owner_id: String!
             conversation_id: String!
             message: String!
+            messageType: String!
         ) : Message
 
         createUser(
             name: String!
             lastName: String!
-            phone_number: String!
+            phoneNumber: String!
+            profilePicture: String
             email: String!
-            activePin: String!
-            isActive: Boolean!
+            activePin: String
+            isActive: Boolean
         ) : User
     }
 

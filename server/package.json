@@ -14,7 +14,9 @@
     "express": "^4.16.4",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.2",
-    "mongoose": "^5.3.4"
+    "mongoose": "^5.3.4",
+    "secure-pin": "^1.0.14",
+    "twilio": "^3.23.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
