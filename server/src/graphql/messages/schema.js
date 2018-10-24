@@ -5,6 +5,7 @@ export default `
         owner_id: String!
         conversation_id: String!
         message: String!
+        messageType: String!
         user: User
     }
 

@@ -4,7 +4,8 @@ export default `
         _id: String!
         name: String!
         lastName: String!
-        phone_number: String!
+        phoneNumber: String!
+        profilePricture: String!
         email: String!
         activePin: String!
         isActive: Boolean!

@@ -4,10 +4,11 @@ import mongoose from 'mongoose';
 const Users = mongoose.model('Users',{
     name: String,
     lastName: String,
-    phone_number: Number,
+    phoneNumber: { type: Number, index: { unique: true } },
+    profilePicture: String,
     email: String,
     activePin: Number,
-    isActive: Boolean,
+    isActive: {type: Boolean, default: false },
 })
 
 export default Users;

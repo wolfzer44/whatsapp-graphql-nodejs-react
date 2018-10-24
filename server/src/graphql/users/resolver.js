@@ -1,3 +1,6 @@
+import * as securePin from 'secure-pin';
+import { SMS } from '../../services';
+
 export default {
     
     Query: {
@@ -29,6 +32,10 @@ export default {
 
     Mutation: {
         createUser: async (root, args, { Users }) => {
+            const  pin = securePin.generatePinSync(6)
+            args.activePin = pin;
+
+            const sms = await SMS(pin, args.phoneNumber);
             const response = await Users.create(args);
             return response;
         },
