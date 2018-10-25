@@ -1,0 +1,4 @@
+.arch
+client/
+.DS_Store
+server/.env

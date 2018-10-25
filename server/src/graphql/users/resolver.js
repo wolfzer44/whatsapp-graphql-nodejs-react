@@ -39,5 +39,17 @@ export default {
             const response = await Users.create(args);
             return response;
         },
+
+        activeUser: async (root, {phoneNumber, activePin}, { Users }) => {
+
+                const response = await Users.findOneAndUpdate({ 'phoneNumber': phoneNumber, 'activePin': activePin }, { $set: { 'isActive': true } });
+                
+                if(response === null) {
+                    throw new Error('INVALID PIN')
+                } else {
+                    return response;
+                }
+
+        },
     },
 };
