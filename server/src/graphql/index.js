@@ -39,6 +39,11 @@ const queryMutations = `
             activePin: String
             isActive: Boolean
         ) : User
+
+        activeUser(
+            phoneNumber: String!
+            activePin: String!
+        ) : User
     }
 
     type Subscription {
